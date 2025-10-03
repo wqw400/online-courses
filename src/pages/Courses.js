@@ -6,7 +6,7 @@ const courses = [
     title: "Основы интернет-безопасности",
     description: "Научитесь распознавать мошеннические схемы в сети и защищать себя.",
     lessons: 8,
-    video: "videos/IMG_5090.mp4",
+    video: "/videos/IMG_5090.mp4",
   },
   {
     id: 2,
@@ -46,7 +46,9 @@ function Courses() {
                 controls
                 className="w-full rounded-lg mb-4"
                 src={course.video}
-              />
+              >
+                Ваш браузер не поддерживает тег video.
+              </video>
             )}
           </div>
         ))}
