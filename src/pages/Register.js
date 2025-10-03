@@ -1,21 +1,34 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Register() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">Регистрация</h1>
-        <form className="space-y-4">
-          <input type="text" placeholder="Имя" className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700" />
-          <input type="email" placeholder="Email" className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700" />
-          <input type="password" placeholder="Пароль" className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700" />
-          <button type="submit" className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold py-3 rounded-lg transition-transform transform hover:scale-105">
-            Зарегистрироваться
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-}
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
+      <motion.div
+        className="max-w-md w-full p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">Регистрация</h1>
 
-export default Register;
+        <form className="flex flex-col gap-4">
+          <input
+            type="text"
+            placeholder="Имя"
+            className="p-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            className="p-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white"
+          />
+          <input
+            type="password"
+            placeholder="Пароль"
+            className="p-3 rounded-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white"
+          />
+          <button
+            type="submit"
+            className="p-3 bg-yellow-400 text-gra
