@@ -11,7 +11,9 @@ function Register() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">Регистрация</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">
+          Регистрация
+        </h1>
 
         <form className="flex flex-col gap-4">
           <input
@@ -31,4 +33,21 @@ function Register() {
           />
           <button
             type="submit"
-            className="p-3 bg-yellow-400 text-gra
+            className="p-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-300 transition"
+          >
+            Зарегистрироваться
+          </button>
+        </form>
+
+        <p className="mt-4 text-center text-gray-600 dark:text-gray-300">
+          Уже есть аккаунт?{" "}
+          <Link to="/login" className="text-indigo-600 hover:underline">
+            Войти
+          </Link>
+        </p>
+      </motion.div>
+    </div>
+  );
+}
+
+export default Register;
