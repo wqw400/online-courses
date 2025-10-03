@@ -1,50 +1,37 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Вход с email: ${email} и паролем: ${password}`);
-    // Здесь будет логика авторизации
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-      <div className="bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-lg w-full max-w-md">
-        <h2 className="text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">Вход</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="flex justify-center items-center min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <h1 className="text-2xl font-bold mb-6 text-center">Вход</h1>
+        <form className="space-y-4">
           <input
             type="email"
             placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 border rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white"
-            required
+            className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <input
             type="password"
             placeholder="Пароль"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-3 border rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white"
-            required
+            className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
           <button
             type="submit"
-            className="w-full py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-xl transition"
+            className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold py-3 rounded-lg transition-transform transform hover:scale-105"
           >
             Войти
           </button>
         </form>
-        <p className="mt-4 text-center text-gray-600 dark:text-gray-300">
-          Нет аккаунта?{" "}
-          <Link to="/register" className="text-indigo-500 hover:underline">
-            Зарегистрироваться
-          </Link>
-        </p>
+
+        <div className="text-center mt-4">
+          <p className="text-gray-500 dark:text-gray-400">
+            Нет аккаунта?{" "}
+            <a href="/register" className="text-indigo-600 dark:text-yellow-400 font-semibold hover:underline">
+              Зарегистрироваться
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

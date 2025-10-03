@@ -33,10 +33,10 @@ function Courses() {
         {courses.map((course) => (
           <div
             key={course.id}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition"
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-4 hover:shadow-xl transition transform hover:scale-105"
           >
             <h2 className="text-xl font-semibold mb-2">{course.title}</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">{course.description}</p>
+            <p className="text-gray-600 dark:text-gray-300 mb-2">{course.description}</p>
             <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
               Кол-во уроков: {course.lessons}
             </p>
@@ -46,9 +46,7 @@ function Courses() {
                 controls
                 className="w-full rounded-lg mb-4"
                 src={course.video}
-              >
-                Ваш браузер не поддерживает тег video.
-              </video>
+              />
             )}
           </div>
         ))}
