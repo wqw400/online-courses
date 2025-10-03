@@ -7,21 +7,21 @@ const courses = [
     title: "Основы интернет-безопасности",
     description: "Научитесь распознавать мошеннические схемы и защищать себя.",
     lessons: 8,
-    video: "/videos/IMG_5090.mp4",
+    video: "https://www.w3schools.com/html/movie.mp4",
   },
   {
     id: 2,
     title: "Фишинг и соцсети",
     description: "Как не попасться на уловки мошенников в соцсетях и почте.",
     lessons: 6,
-    video: "/videos/phishing.mp4",
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 3,
     title: "Онлайн-платежи",
     description: "Безопасные методы оплаты и защита ваших данных.",
     lessons: 5,
-    video: "/videos/online_payments.mp4",
+    video: "https://www.youtube.com/shorts/8uMUiUPvfMk",
   },
 ];
 
